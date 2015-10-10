@@ -1,4 +1,44 @@
+<h3>Heading 3</h3>
+
+<h4>Heading 4</h4>
+
+<h5>Heading 5</h5>
+
+<h6>Heading 6</h6>
+
+<p>Paragraph lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 <ul>
-<li>One</li>
-<li>Two</li>
+  <li>Bullet 1</li>
+  <li>Bullet 2</li>
+  <li>Bullet 3</li>
+  <li>Bullet 4</li>
+</ul>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+<ul>
+  <li>
+  <code>handlers.link</code> is fired with the result of each discovered link (broken or not) within the current queue item.</li>
+  <li>
+  <code>handlers.item</code> is fired after a queue item's last result, on zero results, or if the HTML could not be retreived.</li>
+  <li><p><code>handlers.end</code> is fired when the end of the queue has been reached.</p></li>
+  <li><p><code>.dequeue(id)</code> removes an item from the queue. Returns <code>true</code> on success or an <code>Error</code> on failure.</p></li>
+  <li>
+  <p><code>.enqueue(htmlUrl, customData)</code> adds an item to the queue. Items are auto-dequeued when their requests are complete. Returns a queue ID on success or an <code>Error</code> on failure.</p>
+
+  <ul>
+  <li>
+  <code>customData</code> is optional data that is stored in the queue item.</li>
+  </ul>
+  </li>
+  <li><p><code>.length()</code> returns the number of items in the queue.</p></li>
+  <li><p><code>.numActiveItems()</code> returns the number of active HTML URL sessions (series of link requests).</p></li>
+  <li><p><code>.numActiveLinks()</code> returns the number of active link requests.</p></li>
+  <li><p><code>.pause()</code> will pause the queue, but will not pause any active requests.</p></li>
+  <li><p><code>.resume()</code> will resume the queue.</p></li>
 </ul>
