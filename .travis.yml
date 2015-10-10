@@ -8,6 +8,8 @@ jdk:
   - oraclejdk8
 notifications:
   email: false
+virtualenv:
+  system_site_packages: true
 git:
   depth: 10
 addons:
